@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import classes from './App.module.css'
+import {GlobalState} from 'context/globalState'
+import {Navbar} from 'components/Navbar'
+import {Form} from 'components/Form'
+import {Draft} from 'components/Draft'
+import {Main} from 'components/Main'
+
+// Принимаем глобальное состояние
+
+ const App = () => {
+    return (
+        <GlobalState>
+            <div className = {classes.App}>
+                <Navbar/>
+                <Form/>
+                <Draft/>
+                <Main/>
+            </div>
+        </GlobalState>
+    )
 }
 
 export default App;

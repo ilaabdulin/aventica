@@ -1,0 +1,20 @@
+.App {
+    background-color: aqua;
+    padding: 10px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+    "navbar navbar"
+    "form main"
+    "draft main";
+    grid-template-rows: 10vh 20vh 1fr;
+    grid-template-columns: 30vw 1fr;
+    grid-gap: 10px;
+    color: seashell;
+    /* Скопировал рандомные селекторы по отмене выделения, хз чо эт: */
+    -moz-user-select: none; /* Mozilla Firefox */
+    -ms-user-select: none; /* Internet Explorer (не поддерживается) */
+    -o-user-select: none; /* Opera Presto (не поддерживается) */
+    -webkit-user-select: none; /* Google Chrome, Opera Next, Safari */
+}
+
